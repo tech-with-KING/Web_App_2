@@ -1,11 +1,13 @@
-import React from "react";
-import "./style.css";
-
-export default function App() {
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import './style.css';
+import HomePage from '../HomePage.js';
+function App() {
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+      </Switch>
+    </Router>
   );
 }
